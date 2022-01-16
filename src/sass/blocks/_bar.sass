@@ -1,0 +1,112 @@
+.bar 
+    position: fixed
+    z-index: 100
+    top: 0
+    left: 0
+    display: none
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    text-align: center
+    width: 5.6em
+    height: 100vh
+    padding: 1em 0.8em 1.8em 0.6em
+    background: $blue
+    &__logo
+        margin: 0 0 1.4em 0
+    &__item
+        span
+            display: block
+            margin: 0 0 2px 0
+            font-weight: 500
+            font-size: 10px
+            color: #FFF
+            line-height: 15px
+    &__center
+        transform: translateY(-2.2em)
+        .bar__item
+            margin: 0 0 1.4em 0
+            &:nth-of-type(1) 
+                .bar__btn img
+                    width: 2em
+            &:nth-of-type(2) 
+                .bar__btn img
+                    width: 2.2em
+            &:nth-of-type(3) 
+                .bar__btn img
+                    width: 1.6em
+    &__btn
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 4em
+        height: 4em
+        margin: 0 auto
+        border: 1px solid rgba(255,255,255,0.05)
+        border-radius: 5px
+        background-color: #144597
+        cursor: pointer
+        img
+            transition: transform 0.3s
+        &:hover
+            img
+                transform: scale(1.1)
+    &__social
+
+.open-menu
+    .bar__btn
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        padding: 0 1em
+        span
+            display: block
+            height: 3px
+            margin: 0.4em 0
+            background: #FFF
+            transition: width 0.3s
+            &:nth-of-type(1)
+                width: 100%
+            &:nth-of-type(2)
+                width: 70%
+            &:nth-of-type(3)
+                width: 35%
+    &:hover 
+        .bar__btn span
+            width: 100%
+
+// bar media
+@media screen and ( max-width: 992px )
+    .bar
+        flex-direction: row-reverse
+        align-items: center
+        width: 100%
+        height: auto
+        padding: 0.5em
+        &__logo
+            display: none
+        &__social
+            display: none
+        &__item
+            display: flex
+            align-items: center
+        &__btn
+            width: 3em
+            height: 3em
+        &__center
+            display: flex
+            align-items: center
+            transform: none
+            .bar__item
+                margin: 0 0 0 0
+                &:nth-of-type(1) 
+                    .bar__btn img
+                        width: 1.6em
+                &:nth-of-type(2) 
+                    .bar__btn img
+                        width: 2em
+
+    .open-menu
+        .bar__btn
+            padding: 0 0.5em

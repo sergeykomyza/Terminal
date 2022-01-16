@@ -1,0 +1,7 @@
+mixin newsSlide(img, date, title, text)
+    a(href="article.html").slider-news__item.new
+        .new__img
+            img(src="img/news/" + img , alt= title)
+            .new__date #{date}
+        .new__title #{title}
+        .new__text #{text}

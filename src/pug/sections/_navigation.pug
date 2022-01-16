@@ -1,0 +1,30 @@
+nav.navigation
+
+    .navigation__top
+        img(src="img/home/bar_logo.png", alt="").navigation__logo.hidden-992
+        ul.navigation__menu.menu
+            each item, hrefs in {index:'главная', about:'о компании', services:'услуги', news:'новости', contacts:'контакты'}
+                li.menu__item
+                    img.menu__arrow(src="img/home/menu_arrow.png", alt="")
+                    a.menu__link(href=""+ hrefs +".html")= '' + item
+
+    .navigation__button.close-menu
+        span.close-menu__word МЕНЮ
+        span.close-menu__icon X
+
+    .navigation__bottom
+        .navigation__contacts.contacts-nav
+            .contacts-nav__item
+                span Позвонить нам:
+                a(href="tel:+74957301890").contacts-nav__phone (495)7301890
+            .contacts-nav__item
+                span Написать нам:
+                a(href="mailto:info@dgterminal.ru").contacts-nav__mail info@dgterminal.ru
+        a(href="").navigation__social
+            img(src="img/home/bar_facebook_icon.png", alt="")
+        .navigation__develop.develop
+            | Разработка и поддержка сайта
+            <br />
+            a(href="https://scrum360.ru/" target="_blank").develop__logo
+                | студия
+                img(src="img/home/logo_scrum360_white.svg", alt="")

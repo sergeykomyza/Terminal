@@ -1,0 +1,10 @@
+mixin service(num, img, name, text)
+	a(href="").services__item.service
+		.service__border.service__border--top
+		.service__num #{num}
+		img.service__img(src="img/services/" + img , alt= name)
+		.service__name #{name}
+		.service__text #{text}
+		.service__button
+			span +
+		.service__border.service__border--bottom

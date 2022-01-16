@@ -1,0 +1,147 @@
+.navigation
+    position: fixed
+    z-index: 101
+    top: 0
+    left: -20em
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 18.8em
+    height: 100vh
+    padding: 2.2em 0 0.5em 2.9em
+    background: $blue
+    overflow-y: auto
+    transition: all 0.5s linear
+    &--open
+        left: 0
+    &__logo
+        width: 2.1em
+        margin: 0 0 3.9em 0
+    &__menu
+        margin: 0 0 0 0
+    &__button
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 17em
+        margin: 0 0 0 0
+        padding: 0 1.3em 0 1.8em
+        height: 2.6em
+        border: 1px solid rgba(255,255,255,0.05)
+        border-radius: 5px
+        background-color: #144597
+        transform: translate(-2em, -2.2em)
+        cursor: pointer
+        &::after
+            @include hoverButton
+        &:hover::after
+            width: 100%
+    &__contacts
+    &__social
+        display: block
+        margin: 0 0 2em 0
+    &__develop
+
+.menu
+    &__item
+        position: relative
+        margin: 0 0 1.6em 0
+        overflow: hidden
+        transition: all 0.3s
+        &:hover
+            padding: 0 0 0 2.5em
+        &:hover .menu__arrow
+            left: 0
+    &__arrow
+        position: absolute
+        left: -100%
+        top: 50%
+        display: block
+        transform: translateY(-50%)
+        transition: all 0.3s
+    &__link
+        display: block
+        font-size: 1.13em
+        font-weight: 400
+        color: #FFF
+        text-transform: uppercase
+        transition: all 0.3s
+        &:hover
+            color: #FFF
+
+.close-menu
+    &__word
+        font-size: 0.9em
+        font-weight: 700
+        color: #FFF
+    &__icon
+        position: relative
+        display: block
+        font-family: $roboto
+        font-size: 1.1em
+        font-weight: 500
+        color: #FFF
+        opacity: 1
+        transition: all 0.3s
+
+.contacts-nav
+    &__item
+        span
+            display: block
+            font-size: 1.13em
+            font-weight: 400
+            color: #FFF
+        &:nth-of-type(1)
+            margin: 0 0 1.6em 0
+            span
+                margin: 0 0 0.3em 0
+        &:nth-of-type(2)
+            margin: 0 0 2.1em 0
+            span
+                margin: 0 0 0.7em 0
+    &__phone
+        font-family: $roboto
+        font-size: 1.88em
+        font-weight: 400
+        color: #FFF
+        &:hover
+            color: #FFF
+    &__mail
+        font-family: $roboto
+        font-size: 1.13em
+        font-weight: 700
+        color: #FFF
+        text-transform: uppercase
+        &:hover
+            color: #FFF
+
+.develop
+    font-family: $roboto
+    font-size: 11px
+    font-weight: 300
+    color: #FFF
+    &__logo
+        font-weight: 700
+        color: #FFF
+        text-transform: uppercase
+        &:hover
+            color: #FFF
+        img
+            width: 8em
+
+/* ================================== navigation media */
+@media screen and ( max-width: 992px )
+    .navigation
+        justify-content: flex-start
+        top: 64px
+        right: -20em
+        left: inherit
+        padding: 6.2em 0 0.5em 2.9em
+        font-size: 13px
+        &--open
+            right: 0
+        &__top
+            margin: 0 0 4em 0
+        &__button
+            position: absolute
+            top: 4.5em

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Перевозки опасных грузов
+	body
+
+		// левый сайдбар 
+		include ./../sections/_bar.pug
+
+		// меню (выезжает по клику)
+		include ./../sections/_navigation.pug
+
+		section#home.home
+
+			.home__slider.slider-home
+				.slider-home__header.header
+						img.header__logo(src="img/home/Logo.png", alt="logo")
+						.header__contacts
+							a(href="tel:+74957301890").header__phone 
+								span (495)
+								| 730-1890
+							a(href="mailto:info@dgterminal.ru").header__mail info@dgterminal.ru
+				.slider-home__line
+					// 1й слайд
+					.slider-home__item(style={background: "linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(img/home/home_slider_7.jpg)"})
+						.slider-home__title.animate__animated.animate__slideInLeft
+							| Авто перевозки
+							<br />
+							| опасных грузов
+						p.slider-home__text
+							| Самый быстрый способ доставить груз
+							<br />
+							| в пункт назначения. Мы предлагаем
+							<br />
+							| лучшие условия для своих клиентов.
+						a(href="").button.slider-home__button 
+							| подробнее
+							img(src="img/home/icon_arrow.png", alt="").button__icon
+					// 2й слайд
+					.slider-home__item(style={background: "linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(img/home/home_slider_5.jpg)"})
+						.slider-home__title.animate__animated.animate__slideInDown
+							| Авиа перевозки
+							<br />
+							| опасных грузов
+						p.slider-home__text
+							| Самый быстрый способ доставить груз
+							<br />
+							| в пункт назначения. Мы предлагаем
+							<br />
+							| лучшие условия для своих клиентов.
+						a(href="").button.slider-home__button 
+							| подробнее
+							img(src="img/home/icon_arrow.png", alt="").button__icon
+					// 3й слайд
+					.slider-home__item(style={background: "linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(img/home/home_slider_3.jpg)"})
+					// 4й слайд
+					.slider-home__item(style={background: "linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(img/home/home_slider_4.jpg)"})
+
+				// навигация слайдера
+				.slider-home__nav.slider-nav
+					ul.slider-nav__dots.dots
+						li.dots__item.dots__item--active
+						li.dots__item
+						li.dots__item
+						li.dots__item
+					.slider-nav__control.control
+						.control__prev.prev
+							.prev__arrow
+						.control__count.count
+							.count__inner
+								.count__cur 1
+								| /
+								.count__all 4
+						.control__next.next
+							.next__arrow
+
+		// Модальные окна
+		include ./../sections/_modals.pug
+
+		include ./../sections/_scripts.pug
+
+

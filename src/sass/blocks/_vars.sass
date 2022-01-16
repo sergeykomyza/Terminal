@@ -1,0 +1,48 @@
+$roboto: 'Roboto'
+$raleway: 'Raleway'
+
+
+$blue: #14489f
+
+// font-sizes
+$px16: 1em
+$px17: 1.0625em
+$px18: 1.125em
+$px19: 1.1875em
+$px20: 1.25em 
+$px21: 1.3125em
+$px22: 1.375em
+$px23: 1.4375em
+$px24: 1.5em
+$px25: 1.5625em
+$px26: 1.625em
+$px27: 1.6875em
+$px28: 1.75em 
+$px29: 1.8125em
+$px30: 1.875em
+$px31: 1.9375em
+$px32: 2em 
+$px33: 2.0625em 
+$px34: 2.125em 
+$px35: 2.1875em 
+$px36: 2.25em 
+$px37: 2.3125em
+$px38: 2.375em 
+$px39: 2.4375em 
+$px40: 2.5em  
+
+@mixin hoverButton
+    content: ''
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    width: 0
+    height: 100%
+    background: #0c3a87
+    transition: width 0.3s
+
+@mixin pagePadding
+    padding: 4.7em 0 0 22.5em
+    @media screen and ( max-width: 992px )
+        padding: 8em 1em 3em 1em

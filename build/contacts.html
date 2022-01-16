@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- favicon-->
+    <link rel="stylesheet" href="img/favicon.ico" type="image/x-icon"/>
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"/>
+    <!-- slick slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <!-- animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <!-- styles-->
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Перевозки опасных грузов | Контакты</title>
+  </head>
+  <body>
+    <!-- левый сайдбар -->
+    <div class="bar animate__animated">
+      <div class="bar__top"><a class="hidden-992" href=""><img class="bar__logo" src="img/home/bar_logo.png" alt="logo"/></a>
+        <div class="bar__item open-menu"><span>МЕНЮ</span>
+          <div class="bar__btn"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="bar__center">
+        <div class="bar__item"><span>ЗАКАЗАТЬ ЗВОНОК</span>
+          <button class="bar__btn" data-toggle="modal" data-target="#order-call"><img src="img/home/bar_phone_icon.png" alt="bar_phone_icon"/></button>
+        </div>
+        <div class="bar__item hidden-992"><span>ОБРАТНАЯ СВЯЗЬ</span>
+          <button class="bar__btn" data-toggle="modal" data-target="#modal-feedback"><img src="img/home/bar_message_icon.png" alt="bar_message_icon"/></button>
+        </div>
+        <div class="bar__item hidden-992"><span>РАССЧИТАТЬ СТОИМОСТЬ</span>
+          <button class="bar__btn" data-toggle="modal" data-target="#modal-calc"><img src="img/home/bar_calc_icon.png" alt="bar_calc_icon"/></button>
+        </div>
+      </div><a class="bar__social" href=""><img src="img/home/bar_facebook_icon.png" alt="bar_facebook_icon"/></a><a class="visible-992" href=""><img src="img/home/bar_logo.png" alt="logo"/></a>
+    </div>
+    <!-- меню (выезжает по клику)-->
+    <nav class="navigation">
+      <div class="navigation__top"><img class="navigation__logo hidden-992" src="img/home/bar_logo.png" alt=""/>
+        <ul class="navigation__menu menu">
+          <li class="menu__item"><img class="menu__arrow" src="img/home/menu_arrow.png" alt=""/><a class="menu__link" href="index.html">главная</a></li>
+          <li class="menu__item"><img class="menu__arrow" src="img/home/menu_arrow.png" alt=""/><a class="menu__link" href="about.html">о компании</a></li>
+          <li class="menu__item"><img class="menu__arrow" src="img/home/menu_arrow.png" alt=""/><a class="menu__link" href="services.html">услуги</a></li>
+          <li class="menu__item"><img class="menu__arrow" src="img/home/menu_arrow.png" alt=""/><a class="menu__link" href="news.html">новости</a></li>
+          <li class="menu__item"><img class="menu__arrow" src="img/home/menu_arrow.png" alt=""/><a class="menu__link" href="contacts.html">контакты</a></li>
+        </ul>
+      </div>
+      <div class="navigation__button close-menu"><span class="close-menu__word">МЕНЮ</span><span class="close-menu__icon">X</span></div>
+      <div class="navigation__bottom">
+        <div class="navigation__contacts contacts-nav">
+          <div class="contacts-nav__item"><span>Позвонить нам:</span><a class="contacts-nav__phone" href="tel:+74957301890">(495)7301890</a></div>
+          <div class="contacts-nav__item"><span>Написать нам:</span><a class="contacts-nav__mail" href="mailto:info@dgterminal.ru">info@dgterminal.ru</a></div>
+        </div><a class="navigation__social" href=""><img src="img/home/bar_facebook_icon.png" alt=""/></a>
+        <div class="navigation__develop develop">
+          Разработка и поддержка сайта<br /><a class="develop__logo" href="https://scrum360.ru/" target="_blank">студия<img src="img/home/logo_scrum360_white.svg" alt=""/></a></div>
+      </div>
+    </nav>
+    <section class="contacts" id="contacts">
+      <h1 class="contacts__title title">Контакты</h1>
+      <h2 class="contacts__tagtitle tagtitle">
+        Свяжитесь с нами<br />любым удобным способом.</h2>
+      <div class="contacts__datas">
+        <div class="contacts__item data"><img class="data__icon" src="img/contacts/phone_icon.png" alt="phone_icon"/>
+          <div class="data__info data__info--s info-data"><a class="info-data__text" href="tel:+74957301890"><span>(495)</span>730-1890</a></div>
+        </div>
+        <div class="contacts__item data"><img class="data__icon" src="img/contacts/dog_icon.png" alt="dog_icon"/>
+          <div class="data__info data__info--s info-data"><a class="info-data__text" href="mailto:info@dgterminal.ru">info@dgterminal.ru</a></div>
+        </div>
+        <div class="contacts__item data"><img class="data__icon" src="img/contacts/chair_icon.png" alt="chair_icon"/>
+          <div class="data__info data__info--b info-data">
+            <p class="info-data__text">
+               124340, г.Москва, а/п "Шереметьево",<br />К-340, Шереметьевское шоссе д.5 стр.1,<br />офис №204</p>
+          </div>
+        </div>
+      </div>
+      <div class="contacts__feedback">
+        <div class="contacts__order"><img src="img/contacts/message_icon.png" alt="message_icon"/>
+          <form class="contacts__form form" id="form" action="#">
+            <input class="form__input" type="text" placeholder="Ваше имя"/>
+            <input class="form__input" type="text" placeholder="Ваш телефон"/>
+            <input class="form__input" type="text" placeholder="Ваш email"/>
+            <input class="form__input" type="text" placeholder="Тема обращения"/>
+            <textarea class="form__textarea" placeholder="Ваше обращение"></textarea>
+            <div class="form__agree">
+              <div class="button form__button">отправить</div>
+              <p class="form__text">
+                Нажимая кнопку заказать, вы даете согласие
+                на <a href="">обработку персональных данных</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="contacts__coord coord"><img class="coord__icon" src="img/contacts/marker_icon.png" alt="marker_icon"/>
+          <div class="coord__map" id="map"></div>
+          <button class="coord__button"><img src="img/contacts/navigator_icon.png" alt="navigator_icon"/>проложить маршрут</button>
+        </div>
+      </div>
+    </section>
+    <!-- jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- inputmask-->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+    <!-- slick slider-->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- bootstrap-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- scripts-->
+    <script src="js/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  </body>
+</html>

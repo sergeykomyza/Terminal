@@ -1,0 +1,88 @@
+// модальное окно - Заказать звонок
+#order-call.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+	.modal-dialog
+		.modal-content
+			.modal-header
+				h5#order-call-title.modal__title Заказать звонок
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='true') &times;
+			.modal-body
+				form#order-call-form.modal__form.form-modal(action="#")
+					input(type="text" placeholder="Ваше имя").form-modal__input
+					input(type="text" placeholder="Ваш телефон").form-modal__input
+					.form-modal__title В какой день вам перезвонить ?
+					.form-modal__days
+						.form-modal__day.day
+							input(type="radio" name="day")#now.day__input
+							label.day__label(for="now") Прямо сейчас
+						.form-modal__day.day
+							input(type="radio" name="day" checked)#today.day__input
+							label.day__label(for="today") Сегодня
+						.form-modal__day.day
+							input(type="radio" name="day")#tomorrow.day__input
+							label.day__label(for="tomorrow") Завтра
+						.form-modal__day.day
+							input(type="radio" name="day")#anyday.day__input
+							label.day__label(for="anyday") В любой день
+					.form-modal__title В какое время ?
+					select.form-modal__time
+						each val in ['9.00', '10.00', '11.00', '12.00', '13.00', '14.00', '15.00', '16.00', '17.00', '18.00']
+							option= val
+					.button.form-modal__button отправить
+					p.form-modal__text
+						| Нажимая кнопку заказать, вы даете согласие
+						| на 
+						<br />
+						a(href="") обработку персональных данных
+
+// модальное окно - Обратная связь
+#modal-feedback.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+	.modal-dialog
+		.modal-content
+			.modal-header
+				h5#modal-feedback-title.modal__title Обратная связь
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='true') &times;
+			.modal-body
+				form#modal-feedback-form.modal__form.form-modal(action="#")
+					input(type="text" placeholder="Ваше имя").form-modal__input
+					input(type="text" placeholder="Ваш телефон").form-modal__input
+					input(type="text" placeholder="Ваш Email").form-modal__input.form-modal__input--100
+					textarea(placeholder="Ваше сообщение").form-modal__textarea
+					.form-modal__file.file
+						.file__upload
+							label
+								input.file__download(type="file")
+								span.file__button
+						input.file__input(type="text" placeholder="Прикрепить документ")
+					.button.form-modal__button отправить
+					p.form-modal__text
+						| Нажимая кнопку заказать, вы даете согласие
+						| на 
+						<br />
+						a(href="") обработку персональных данных
+
+// модальное окно - рассчитать стоимость
+#modal-calc.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+	.modal-dialog
+		.modal-content
+			.modal-header
+				h5#modal-calc-title.modal__title Рассчитать стоимость
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='true') &times;
+			.modal-body
+				form#modal-calc-form.modal__form.form-modal(action="#")
+					input(type="text" placeholder="Откуда").form-modal__input
+					input(type="text" placeholder="Куда").form-modal__input
+					.form-modal__title Тип груза
+					select.form-modal__cargo
+						each val in ['Взрывчатые вещества', 'Газы', 'Легковоспламеняющиеся жидкости', 'Легковоспламеняющие твердые вещества', 'Окисляющие вещества', 'Токсичные и инфекционные вещества', 'Радиоактивные материалы', 'Коррозионные вещества', 'Прочие опасные вещества']
+							option= val
+					.form-modal__title Количество мест
+					input(type="number" min="1" value="1").form-modal__input.form-modal__input--100
+					.button.form-modal__button отправить
+					p.form-modal__text
+						| Нажимая кнопку заказать, вы даете согласие
+						| на 
+						<br />
+						a(href="") обработку персональных данных

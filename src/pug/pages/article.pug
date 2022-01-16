@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Перевозки опасных грузов | Статья
+	body
+
+		// левый сайдбар 
+		include ./../sections/_bar.pug
+
+		// меню (выезжает по клику)
+		include ./../sections/_navigation.pug
+
+		section#article.article
+			.article__wrap
+				.article__post.post
+					h1.post__title.title 25.10.2020
+					h2.post__tagtitle.tagtitle Заголовок новости
+					p.post__text
+						| Текст новости уже детально будет идти тут. Эта часть может быть включена в краткий заголовок, а может быть и нет. В общем текст будет выглядеть вот так. Детально будет идти тут.
+					img.post__img(src="img/article/post.png", alt="post")
+					p.post__text
+						| Текст новости уже детально будет идти тут. Эта часть может быть включена в краткий заголовок, а может быть и нет. В общем текст будет выглядеть вот так. Детально будет идти тут. Текст новости уже детально будет идти тут. Эта часть может быть включена в краткий заголовок, а может быть и нет. В общем текст будет выглядеть вот так. Детально будет идти тут.
+					a.button.post__button(href="news.html") назад к новостям
+				.article__news.news-article
+					h3.news-article__title Другие новости
+					a(href="").news-article__item.new
+						.new__img
+							img(src="img/article/post.png" alt='post')
+							.new__date 25.10.2020
+						.new__title Заголовок новости
+						.new__text Кратнкий текст новости. Самая важная информация будет здесь.
+					a(href="").news-article__item.new
+						.new__img
+							img(src="img/article/post.png" alt='post')
+							.new__date 25.10.2020
+						.new__title Заголовок новости
+						.new__text Кратнкий текст новости. Самая важная информация будет здесь.
+
+		include ./../sections/_scripts.pug

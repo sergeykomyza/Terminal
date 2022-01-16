@@ -1,0 +1,84 @@
+.article
+	@include pagePadding
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: 100vh
+	font-size: 0.832vw
+	// font-size: 16px
+	background: linear-gradient(to top, rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../img/article/article_bg.jpg') left 0px no-repeat
+	background-size: cover
+	&__wrap
+		display: flex
+	&__post
+		width: 37.8em
+		margin: 0 8em 0 0
+	&__news
+		width: 19.4em
+		padding: 2.3em 0 0 0
+
+.post
+	&__title
+		margin: 0 0 0.6em 0
+	&__tagtitle
+		margin: 0 0 1.1em 0
+	&__text
+		margin: 0 0 1em 0
+		font-size: 1.13em
+		font-weight: 400
+	&__img
+		display: block
+		width: 100%
+		margin: 0 0 1.8em 0
+		border-radius: 5px
+	&__button
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 14.7em
+		height: 2.7em
+		margin: 2.4em 3.2em 0 0
+		font-size: 1.35em
+		color: #FFF
+
+.news-article
+	&__title
+		margin: 0 0 1.4em 0
+		font-size: 1.9em
+		font-weight: 700
+		letter-spacing: -1px
+	&__item
+		display: block
+		margin: 0 0 4em 0
+		.new__img
+			height: 12em
+
+/* ==================================== article page*/
+@media screen and ( max-width: 1600px )
+	.article
+		font-size: 0.9vw
+
+@media screen and ( max-width: 1200px )
+	.article
+		font-size: 1.1vw
+
+@media screen and ( max-width: 992px )
+	.article
+		height: auto
+		font-size: 14px
+		&__wrap
+			flex-direction: column
+		&__post
+			width: 100%
+			margin: 0 0 2em 0
+		&__news
+			width: 100%
+			padding: 0
+
+	.post
+		&__button
+			margin: 2.4em auto 0 auto
+
+	.news-article
+		&__item
+			width: 80%

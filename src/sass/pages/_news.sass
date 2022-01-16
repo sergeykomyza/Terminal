@@ -1,0 +1,140 @@
+.news
+	@include pagePadding
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: 100vh
+	font-size: 0.832vw
+	// font-size: 16px
+	background: linear-gradient(to top, rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../img/news/news_bg.jpg') left 0px no-repeat
+	background-size: cover
+	&__title
+		margin: 0 0 0.6em 0
+	&__tagtitle
+		margin: 0 0 1.1em 0
+	&__text
+		margin: 0 0 3.2em 0
+		font-size: 1.13em
+		font-weight: 400
+	&__slider
+		width: 62.8em
+	&__nav
+		display: flex
+		align-items: center
+		margin: -2em 0 6.6em 2em
+	&__bottom
+		display: flex
+		align-items: center
+	&__button
+		width: 14.7em
+		height: 2.7em
+		margin: 0 3.2em 0 0
+		font-size: 1.35em
+		color: #FFF
+	&__signs
+		width: 13em
+
+.slider-news
+	&__item
+		width: 19.4em
+		margin: 0 1.6em 0 0
+	.slick-dots
+		position: absolute
+		left: 7.2em
+		display: flex
+		padding: 0 0 0 0em
+		li 
+			width: 0.625em
+			height: 0.625em
+			margin: 0 0.9em 0 0
+			background: #FFF
+			border-radius: 50%
+			cursor: pointer
+		button
+			display: none
+		.slick-active
+			background: $blue
+	.slick-list
+		margin: 0 0 4.4em 0
+
+.new
+	&__img
+		position: relative
+		width: 100%
+		height: 12em
+		margin: 0 0 0.8em 0
+		border-radius: 5px
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transition: transform 0.3s
+	&__date
+		position: absolute
+		left: 0
+		bottom: 0
+		padding: 0.3em 0.76em
+		font-family: $roboto
+		font-size: 12px
+		font-weight: 700
+		color: #FFF
+		background: $blue
+	&__title
+		margin: 0 0 0.5em 0
+		font-size: 1.13em
+		font-weight: 700
+		color: #000
+	&__text
+		font-size: 0.88em
+		font-weight: 400
+		color: #000
+	&:hover
+		.new__img img
+			transform: scale(1.1)
+
+.nav-news
+	&__prev
+		margin: 0 10.8em 0 0
+		@extend .control__prev
+	&__next
+		@extend .control__next
+
+/* ====================================== news media */
+@media screen and ( max-width: 1600px )
+	.news
+		font-size: 14px
+
+@media screen and ( max-width: 1200px )
+	.news
+		&__slider
+			width: 41.8em
+
+@media screen and ( max-width: 992px )
+	.news
+		height: auto
+		&__slider
+			width: 100%
+		&__nav
+			justify-content: center
+			margin: 0 0 5em 0
+		&__bottom
+			flex-direction: column
+			justify-content: center
+		&__button
+			margin: 0 0 2em 0
+
+	.slider-news
+		&__item
+			width: auto
+			margin: 0 0.5em
+
+	.nav-news
+		&__prev,
+		&__next
+			margin: 0 0.3em
+
+@media screen and ( max-width: 565px )
+	.slider-news
+		&__item
+			margin: 0

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Перевозки опасных грузов | О компании
+	body
+
+		// левый сайдбар 
+		include ./../sections/_bar.pug
+
+		// меню (выезжает по клику)
+		include ./../sections/_navigation.pug
+
+		section#about.about
+
+			// fancybox
+			.modal-license  
+				.modal-license__body.animate__animated
+					i.far.fa-times-circle.modal-license--close
+					.modal-license__slider.modal-slider
+					.modal-slider__nav
+						button.modal-slider__btn.modal-slider__nav--prev ←
+						button.modal-slider__btn.modal-slider__nav--next →
+
+			h1.about__title.title О компании
+			h2.about__tagtitle.tagtitle ООО “Ди Джи Терминал”
+			img(src="img/about/Logo.png", alt="").about__logo
+			p.about__text
+				| Самый быстрый способ доставить груз в пункт назначения.
+				<br />
+				| Мы предлагаем лучшие условия для своих клиентов. Самый быстрый
+				<br />
+				| способ доставить груз в пункт назначения. Мы предлагаем лучшие
+				<br />
+				| условия для своих клиентов.
+
+			.about__items
+				.about__item.item-about
+					.item-about__icon
+						img(src="img/about/icon_airport.png", alt="icon_airport")
+					p.item-about__text
+						| Офисы
+						<br />
+						| в крупнейших
+						<br />
+						| аэропортах Москвы
+
+				.about__item.item-about
+					.item-about__icon
+						img(src="img/about/icon_man.png", alt="icon_man")
+					p.item-about__text
+						| Сертифицированный
+						<br />
+						| персонал
+
+				.about__item.item-about
+					.item-about__icon
+						img(src="img/about/icon_globe.png", alt="icon_globe")
+					p.item-about__text
+						| Перевозки
+						<br />
+						| опасных грузов
+						<br />
+						| по всему миру
+
+			.about__licensed
+				.about__license
+					img(src="img/about/license-7-min.jpg", alt="license-4")
+				.about__license
+					img(src="img/about/license-5-min.jpg", alt="license-5")
+				.about__license
+					img(src="img/about/license-6-min.jpg", alt="license-6")
+				.about__license
+					img(src="img/about/license-4-min.jpg", alt="license-7")
+				.about__license
+					img(src="img/about/license-1-min.jpg", alt="license-1")
+				.about__license
+					img(src="img/about/license-2-min.jpg", alt="license-2")
+				.about__license
+					img(src="img/about/license-3-min.jpg", alt="license-3")
+
+			// навигация слайдера
+			.visible-992
+				.about__nav.slider-nav
+					ul.slider-nav__dots.dots
+						li.dots__item.dots__item--active
+						li.dots__item
+						li.dots__item
+						li.dots__item
+						li.dots__item
+						li.dots__item
+						li.dots__item
+
+			a(href="").about__button.button посмотреть контакты
+
+		include ./../sections/_scripts.pug

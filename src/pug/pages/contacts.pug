@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Перевозки опасных грузов | Контакты
+	body
+
+		// левый сайдбар 
+		include ./../sections/_bar.pug
+
+		// меню (выезжает по клику)
+		include ./../sections/_navigation.pug
+
+		section#contacts.contacts
+			h1.contacts__title.title Контакты
+			h2.contacts__tagtitle.tagtitle
+				| Свяжитесь с нами
+				<br />
+				| любым удобным способом.
+
+			.contacts__datas
+
+				.contacts__item.data
+					img(src="img/contacts/phone_icon.png", alt="phone_icon").data__icon
+					.data__info.data__info--s.info-data
+						a(href="tel:+74957301890").info-data__text
+							span (495)
+							| 730-1890
+
+				.contacts__item.data
+					img(src="img/contacts/dog_icon.png", alt="dog_icon").data__icon
+					.data__info.data__info--s.info-data
+						a(href="mailto:info@dgterminal.ru").info-data__text info@dgterminal.ru
+
+				.contacts__item.data
+					img(src="img/contacts/chair_icon.png", alt="chair_icon").data__icon
+					.data__info.data__info--b.info-data
+						p.info-data__text 
+							| 124340, г.Москва, а/п "Шереметьево",
+							<br />
+							| К-340, Шереметьевское шоссе д.5 стр.1,
+							<br />
+							| офис №204
+
+			.contacts__feedback
+				.contacts__order
+					img(src="img/contacts/message_icon.png", alt="message_icon")
+					form#form.contacts__form.form(action="#")
+						input(type="text" placeholder="Ваше имя").form__input
+						input(type="text" placeholder="Ваш телефон").form__input
+						input(type="text" placeholder="Ваш email").form__input
+						input(type="text" placeholder="Тема обращения").form__input
+						textarea(placeholder="Ваше обращение").form__textarea
+						.form__agree
+							.button.form__button отправить
+							p.form__text
+								| Нажимая кнопку заказать, вы даете согласие
+								| на 
+								a(href="") обработку персональных данных
+
+				.contacts__coord.coord
+					img(src="img/contacts/marker_icon.png", alt="marker_icon").coord__icon
+					#map.coord__map
+					button.coord__button
+						img(src="img/contacts/navigator_icon.png", alt="navigator_icon")
+						| проложить маршрут
+
+		include ./../sections/_scripts.pug
+		script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")

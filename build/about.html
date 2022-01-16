@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- favicon-->
+    <link rel="stylesheet" href="img/favicon.ico" type="image/x-icon"/>
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"/>
+    <!-- slick slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <!-- animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <!-- styles-->
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Перевозки опасных грузов | О компании</title>
+  </head>
+  <body>
+    <!-- левый сайдбар -->
+    <div class="bar animate__animated">
+      <div class="bar__top"><a class="hidden-992" href=""><img class="bar__logo" src="img/home/bar_logo.png" alt="logo"/></a>
+        <div class="bar__item open-menu"><span>МЕНЮ</span>
+          <div class="bar__btn"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="bar__center">
+        <div class="bar__item"><span>ЗАКАЗАТЬ ЗВОНОК</span>
+          <button class="bar__btn" data-toggle="modal" data-target="#order-call"><img src="img/home/bar_phone_icon.png" alt="bar_phone_icon"/></button>
+        </div>
+        <div class="bar__item hidden-992"><span>ОБРАТНАЯ СВЯЗЬ</span>
+          <button class="bar__btn" data-toggle="modal" data-target="#modal-feedback"><img src="img/home/bar_message_icon.png" alt="bar_message_icon"/></button>
+        </div>
+        <div class="bar__item hidden-992"><span>РАССЧИТАТЬ СТОИМОСТЬ</span>
+          <button class="bar__btn" data-toggle="modal" data-target="#modal-calc"><img src="img/home/bar_calc_icon.png" alt="bar_calc_icon"/></button>
+        </div>
+      </div><a class="bar__social" href=""><img src="img/home/bar_facebook_icon.png" alt="bar_facebook_icon"/></a><a class="visible-992" href=""><img src="img/home/bar_logo.png" alt="logo"/></a>
+    </div>
+    <!-- меню (выезжает по клику)-->
+    <nav class="navigation">
+      <div class="navigation__top"><img class="navigation__logo hidden-992" src="img/home/bar_logo.png" alt=""/>
+        <ul class="navigation__menu menu">
+          <li class="menu__item"><img class="menu__arrow" src="img/home/menu_arrow.png" alt=""/><a class="menu__link" href="index.html">главная</a></li>
+          <li class="menu__item"><img class="menu__arrow" src="img/home/menu_arrow.png" alt=""/><a class="menu__link" href="about.html">о компании</a></li>
+          <li class="menu__item"><img class="menu__arrow" src="img/home/menu_arrow.png" alt=""/><a class="menu__link" href="services.html">услуги</a></li>
+          <li class="menu__item"><img class="menu__arrow" src="img/home/menu_arrow.png" alt=""/><a class="menu__link" href="news.html">новости</a></li>
+          <li class="menu__item"><img class="menu__arrow" src="img/home/menu_arrow.png" alt=""/><a class="menu__link" href="contacts.html">контакты</a></li>
+        </ul>
+      </div>
+      <div class="navigation__button close-menu"><span class="close-menu__word">МЕНЮ</span><span class="close-menu__icon">X</span></div>
+      <div class="navigation__bottom">
+        <div class="navigation__contacts contacts-nav">
+          <div class="contacts-nav__item"><span>Позвонить нам:</span><a class="contacts-nav__phone" href="tel:+74957301890">(495)7301890</a></div>
+          <div class="contacts-nav__item"><span>Написать нам:</span><a class="contacts-nav__mail" href="mailto:info@dgterminal.ru">info@dgterminal.ru</a></div>
+        </div><a class="navigation__social" href=""><img src="img/home/bar_facebook_icon.png" alt=""/></a>
+        <div class="navigation__develop develop">
+          Разработка и поддержка сайта<br /><a class="develop__logo" href="https://scrum360.ru/" target="_blank">студия<img src="img/home/logo_scrum360_white.svg" alt=""/></a></div>
+      </div>
+    </nav>
+    <section class="about" id="about">
+      <!-- fancybox-->
+      <div class="modal-license"> 
+        <div class="modal-license__body animate__animated"><i class="far fa-times-circle modal-license--close"></i>
+          <div class="modal-license__slider modal-slider"></div>
+          <div class="modal-slider__nav">
+            <button class="modal-slider__btn modal-slider__nav--prev">←</button>
+            <button class="modal-slider__btn modal-slider__nav--next">→</button>
+          </div>
+        </div>
+      </div>
+      <h1 class="about__title title">О компании</h1>
+      <h2 class="about__tagtitle tagtitle">ООО “Ди Джи Терминал”</h2><img class="about__logo" src="img/about/Logo.png" alt=""/>
+      <p class="about__text">
+        Самый быстрый способ доставить груз в пункт назначения.<br />Мы предлагаем лучшие условия для своих клиентов. Самый быстрый<br />способ доставить груз в пункт назначения. Мы предлагаем лучшие<br />условия для своих клиентов.</p>
+      <div class="about__items">
+        <div class="about__item item-about">
+          <div class="item-about__icon"><img src="img/about/icon_airport.png" alt="icon_airport"/></div>
+          <p class="item-about__text">
+            Офисы<br />в крупнейших<br />аэропортах Москвы</p>
+        </div>
+        <div class="about__item item-about">
+          <div class="item-about__icon"><img src="img/about/icon_man.png" alt="icon_man"/></div>
+          <p class="item-about__text">
+            Сертифицированный<br />персонал</p>
+        </div>
+        <div class="about__item item-about">
+          <div class="item-about__icon"><img src="img/about/icon_globe.png" alt="icon_globe"/></div>
+          <p class="item-about__text">
+            Перевозки<br />опасных грузов<br />по всему миру</p>
+        </div>
+      </div>
+      <div class="about__licensed">
+        <div class="about__license"><img src="img/about/license-7-min.jpg" alt="license-4"/></div>
+        <div class="about__license"><img src="img/about/license-5-min.jpg" alt="license-5"/></div>
+        <div class="about__license"><img src="img/about/license-6-min.jpg" alt="license-6"/></div>
+        <div class="about__license"><img src="img/about/license-4-min.jpg" alt="license-7"/></div>
+        <div class="about__license"><img src="img/about/license-1-min.jpg" alt="license-1"/></div>
+        <div class="about__license"><img src="img/about/license-2-min.jpg" alt="license-2"/></div>
+        <div class="about__license"><img src="img/about/license-3-min.jpg" alt="license-3"/></div>
+      </div>
+      <!-- навигация слайдера-->
+      <div class="visible-992">
+        <div class="about__nav slider-nav">
+          <ul class="slider-nav__dots dots">
+            <li class="dots__item dots__item--active"></li>
+            <li class="dots__item"></li>
+            <li class="dots__item"></li>
+            <li class="dots__item"></li>
+            <li class="dots__item"></li>
+            <li class="dots__item"></li>
+            <li class="dots__item"></li>
+          </ul>
+        </div>
+      </div><a class="about__button button" href="">посмотреть контакты</a>
+    </section>
+    <!-- jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- inputmask-->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+    <!-- slick slider-->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- bootstrap-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- scripts-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

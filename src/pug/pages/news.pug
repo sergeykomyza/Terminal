@@ -1,0 +1,39 @@
+include ./../mixins/_newsSlide.pug
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Перевозки опасных грузов | Новости
+	body
+
+		// левый сайдбар 
+		include ./../sections/_bar.pug
+
+		// меню (выезжает по клику)
+		include ./../sections/_navigation.pug
+
+		section#news.news
+			h1.news__title.title Новости
+			h2.news__tagtitle.tagtitle События и достижения
+			p.news__text
+				| Самый быстрый способ доставить груз в пункт назначения.
+				<br />
+				| Мы предлагаем лучшие условия для своих клиентов.
+
+			.news__slider.slider-news
+				+newsSlide('new_1.png', '25.10.2020', 'Заголовок новости', 'Кратнкий текст новости. Самая важная информация будет здесь.')
+				+newsSlide('new_2.png', '25.10.2020', 'Заголовок новости', 'Кратнкий текст новости. Самая важная информация будет здесь.')
+				+newsSlide('new_3.png', '25.10.2020', 'Заголовок новости', 'Кратнкий текст новости. Самая важная информация будет здесь.')
+				+newsSlide('new_1.png', '25.10.2020', 'Заголовок новости', 'Кратнкий текст новости. Самая важная информация будет здесь.')
+			.news__nav.nav-news
+				.nav-news__prev.prev
+					.prev__arrow
+				.nav-news__next.next
+					.next__arrow
+
+			.news__bottom
+				button.button.news__button архив новостей
+				img.news__signs(src="img/news/Badges.png", alt="signs")
+
+		include ./../sections/_scripts.pug

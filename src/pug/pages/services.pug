@@ -1,0 +1,59 @@
+include ./../mixins/_service.pug
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Перевозки опасных грузов | Услуги
+	body
+
+		// левый сайдбар 
+		include ./../sections/_bar.pug
+
+		// меню (выезжает по клику)
+		include ./../sections/_navigation.pug
+
+		section#services.services
+			h1.services__title.title Услуги
+			h2.services__tagtitle.tagtitle Перевозки опасных грузов
+			p.services__text
+				| Перевозим все известные типы опасных грузов. Все перевозки осуществдяются в соответствии с международными стандартами 
+				<br />
+				| безопасности.
+
+			.services__items
+				+service('1', 'danger_icon_002.png', 'Взрывчатые вещества', 'Перевозим все известные типы опасных грузов.')
+				+service('2', 'danger_icon_006.png', 'Газы', 'Перевозим все известные типы опасных грузов.')
+				+service('3', 'danger_icon_003.png', 'Легковоспламеняющиеся жидкости', 'Перевозим все известные типы опасных грузов.')
+				+service('4', 'danger_icon_007.png', 'Легковоспламеняющиеся твердые вещества', 'Перевозим все известные типы опасных грузов.')
+				+service('5', 'danger_icon_011.png', 'Легковоспламеняющиеся твердые вещества', 'Перевозим все известные типы опасных грузов.')
+				+service('6', 'danger_icon_008.png', 'Легковоспламеняющиеся твердые вещества', 'Перевозим все известные типы опасных грузов.')
+				+service('7', 'danger_icon_005.png', 'Окисляющие вещества', 'Перевозим все известные типы опасных грузов.')
+				+service('8', 'danger_icon_001.png', 'Токсичные и инфекционные вещества', 'Перевозим все известные типы опасных грузов.')
+				+service('9', 'danger_icon_004.png', 'Токсичные и инфекционные вещества', 'Перевозим все известные типы опасных грузов.')
+				+service('10', 'danger_icon_010.png', 'Радиоактивные материалы', 'Перевозим все известные типы опасных грузов.')
+				+service('11', 'danger_icon_009.png', 'Коррозионные вещества', 'Перевозим все известные типы опасных грузов.')
+				+service('12', 'danger_icon_012.png', 'Прочие опасные вещества', 'Перевозим все известные типы опасных грузов.')
+
+			button.services__button.button заказать
+
+			img.services__img(src="img/services/Truck.png", alt="truck")
+
+			.services__more
+				.services__order.order-service
+					img.order-service__img(src="img/services/services_1.png", alt="service")
+					.order-service__name Упаковка груза
+					.order-service__text Правильно упакуем груз и подготовим его к отправке
+					button.order-service__button.button заказать
+				.services__order.order-service
+					img.order-service__img(src="img/services/services_2.png", alt="service")
+					.order-service__name Продажа упаковочного материала
+					.order-service__text У нас вы можете приобрести упаковку любого типа и для любого груза.
+					button.order-service__button.button купить
+				.services__order.order-service
+					img.order-service__img(src="img/services/services_3.png", alt="service")
+					.order-service__name Оформление документов для перевозки опасных грузов
+					.order-service__text Подготовим и проверим все документы перед отправкой. 
+					button.order-service__button.button заказать
+
+		include ./../sections/_scripts.pug

@@ -1,0 +1,154 @@
+.modal
+	&__title
+		font-family: $roboto
+		font-size: 20px
+		color: #000
+	&__form
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+.form-modal
+	&__title
+		width: 100%
+		margin: 0 0 10px 0
+		font-family: $roboto
+		font-size: 16px
+		color: #000
+	&__input
+		width: 48%
+		height: 50px
+		margin: 0 0 20px 0
+		padding: 0 0 0 15px
+		font-family: $roboto
+		font-size: 16px
+		color: #000
+		background: #ffffff
+		border-radius: 5px
+		border: 2px solid #DDD
+		&--100
+			width: 100%
+	&__textarea
+		width: 100%
+		height: 100px
+		margin: 0 0 20px 0
+		padding: 15px 0 0 15px
+		font-family: $roboto
+		font-size: 16px
+		color: #000
+		background: #ffffff
+		border-radius: 5px
+		border: 2px solid #DDD
+	&__days
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		width: 100%
+	&__day
+		width: 23%
+		height: 50px
+		margin: 0 0 20px 0
+	&__time
+		display: block
+		width: 100%
+		height: 50px
+		margin: 0 0 20px 0
+		padding: 0 0 0 15px
+		font-family: $roboto
+		font-size: 16px
+		color: #000
+		background: #ffffff
+		border-radius: 5px
+		border: 2px solid #DDD
+		cursor: pointer
+		option
+			display: block
+			padding: 5px 0
+	&__file
+		position: relative
+		display: flex
+		width: 100%
+		height: 50px
+		margin: 0 0 30px 0
+		font-family: $roboto
+		font-size: 16px
+		color: #000
+		background: #ffffff
+		border-radius: 5px
+		border: 2px solid #DDD
+	&__cargo
+		@extend .form-modal__time
+	&__button
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 200px
+		height: 50px
+		margin: 0 auto 20px auto
+		cursor: pointer
+	&__text
+		font-family: $roboto
+		font-size: 14px
+		a 	
+			color: #14489f
+			text-decoration: underline
+
+.file
+	&__upload
+		position: relative
+		top: 0
+		left: 0
+		display: flex
+		align-items: center
+		width: 100%
+		height: 100%
+		label
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+			display: flex
+			align-items: center
+			width: 100%
+			height: 100%
+			padding: 0 0 0 15px
+			cursor: pointer
+	&__download
+		display: none
+	&__button
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		padding: 0 0 0 15px
+		border: none
+
+
+.day
+	&__label
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 100%
+		font-family: $roboto
+		font-size: 14px
+		color: #000
+		background: #ffffff
+		border-radius: 5px
+		border: 2px solid #DDD
+		cursor: pointer
+	&__input
+		display: none
+		&:checked + .day__label
+			border: 2px solid #000
+
+/* ========================== modals media */
+@media screen and ( max-width: 565px )
+	.form-modal
+		&__input
+			width: 100%
+		&__day
+			width: 49%
