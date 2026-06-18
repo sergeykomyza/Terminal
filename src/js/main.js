@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	function sliderHome(sectionSelector, slideSelector, prevSelector, nextSelector, dotSelector) {
 		let slideIndex = 0,
 			section = document.querySelector(sectionSelector),
-			slides = section.querySelectorAll(slideSelector),
-			prev = section.querySelector(prevSelector),
-			next = section.querySelector(nextSelector),
-			dots = section.querySelectorAll(dotSelector),
+			slides = section?.querySelectorAll(slideSelector),
+			prev = section?.querySelector(prevSelector),
+			next = section?.querySelector(nextSelector),
+			dots = section?.querySelectorAll(dotSelector),
 			autoPlay = setInterval(function () {
 				nextSlide(1);
 			}, 900000000);
@@ -80,7 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		});
 	}
-	sliderHome('.home', '.slider-home__item', '.prev', '.next', '.dots__item');
+	if(document.querySelector('.home')){
+		sliderHome('.home', '.slider-home__item', '.prev', '.next', '.dots__item');
+	}
 });
 
 /*===============================================================
@@ -126,10 +128,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	function nextSlide(n) {
 		goSlide(slideIndex += n);
 	}
-	next.addEventListener('click', function () {
+	next?.addEventListener('click', function () {
 		nextSlide(1);
 	});
-	prev.addEventListener('click', function () {
+	prev?.addEventListener('click', function () {
 		nextSlide(-1);
 	});
 	document.addEventListener('click', (e) => {
@@ -138,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		const itsWrapper = target.closest('.about__licensed');
 		const modalClose = document.querySelector('.modal-license--close');
 
-		if (!itsModalBody && !itsWrapper && modal.classList.contains('modal-license--active') || target == modalClose) {
+		if (!itsModalBody && !itsWrapper && modal?.classList.contains('modal-license--active') || target == modalClose) {
 			modal.querySelector('.modal-license__body').classList.add('animate__zoomOut');
 			setTimeout(function () {
 				modal.classList.remove('modal-license--active');
@@ -200,45 +202,36 @@ document.addEventListener('DOMContentLoaded', function () {
 	map on page Сontacts
 ================================================================*/
 document.addEventListener('DOMContentLoaded', function () {
-	ymaps.ready(init);
+	setTimeout(() => {
+		const script = document.createElement('script');
 
-	function init() {
-		var myMap = new ymaps.Map("map", {
+		script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+
+		script.onload = () => {
+			ymaps.ready(initMap);
+		};
+
+		document.body.appendChild(script);
+	}, 2000);
+
+	function initMap() {
+		const myMap = new ymaps.Map('map', {
 			center: [55.753215, 37.622504],
-			zoom: 13,
-			controls: ['smallMapDefaultSet']
-		}, {
-			searchControlProvider: 'yandex#search'
+			zoom: 16
 		});
-		// Создаем геообъект с типом геометрии "Точка".
-		myGeoObject = new ymaps.GeoObject({
-			// Описание геометрии.
-			geometry: {
-				type: "Point"
+
+		const myPlacemark = new ymaps.Placemark(
+			[55.753215, 37.622504],
+			{
+				hintContent: 'г. Луганск, кв. Лиховида 1',
+				balloonContent: 'г. Луганск, кв. Лиховида 1'
 			},
-		});
+			{
+				iconLayout: 'default#image',
+			}
+		);
 
-		myMap.geoObjects
-			.add(myGeoObject)
-			.add(new ymaps.Placemark([55.753215, 37.622504], {
-				balloonContent: '<strong></strong>',
-				iconCaption: ''
-			}, {
-				preset: 'islands#blueCircleDotIconWithCaption',
-				iconCaptionMaxWidth: '200'
-			}));
-
-		// тип карты - гибрид
-		myMap.setType('yandex#publicMap');
-
-		//отключаем зум колёсиком мышки
-		myMap.behaviors.disable('scrollZoom');
-
-		//на мобильных устройствах... (проверяем по userAgent браузера)
-		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-			//... отключаем перетаскивание карты
-			myMap.behaviors.disable('drag');
-		}
+		myMap.geoObjects.add(myPlacemark);
 	}
 });
 
@@ -297,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const orderCallForm = document.querySelector('#order-call-form');
 	const nowInput = document.querySelector('#now');
 	const timeSelect = document.querySelector('.form-modal__time');
-	orderCallForm.addEventListener('change', function () {
+	orderCallForm?.addEventListener('change', function () {
 		if (nowInput.checked) {
 			timeSelect.style.display = 'none';
 			console.log('check');
